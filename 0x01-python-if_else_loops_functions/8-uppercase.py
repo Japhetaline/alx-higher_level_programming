@@ -5,5 +5,5 @@ def uppercase(str):
         japh = ord(c)
         if japh >= 97 and japh <=122:
             japh -= 32
-            print("{:c}".format(japh), end='')
-            print()
+            print("{:c}".format(japh), end="")
+            print("")
