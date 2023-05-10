@@ -2,8 +2,7 @@
 
 def uppercase(str):
     for c in str:
-        japh = ord(c)
-        if japh >= 97 and japh <=122:
-            japh -= 32
-            print("{:c}".format(japh), end="")
+        if ord(c) >= 97 and ord(c) <=122:
+            c = chr(ord(c) - 32)
+            print("{}".format(c), end="")
             print("")
