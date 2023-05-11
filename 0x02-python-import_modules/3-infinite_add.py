@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 import sys
 
-if __name__ != "__main__":
-    exit()
+if __name__ == "__main__":
 
-    k = 0
     output = 0
-    for argument in sys.argv:
-        if k != 0:
-            output += int(argument)
-        else:
-            k += 1
-            print("{:d}".format(output))
+    for k in range(len(sys.argv) - 1):
+        output += int(sys.argv[k + 1])
+        print("{:d}".format(output))
