@@ -2,20 +2,14 @@
 import sys
 
 if __name__ != "__main__":
-    exit()
 
-    argstring = "{:d} argument"
     argcount = len(sys.argv) - 1
     if argcount == 0:
-        argstring += 's.'
+        print("0 arguments.")
     elif argcount == 1:
-        argstring += ':'
+        print("1 argument:")
     else:
-        argstring += 's:'
-        print(argstring.format(argcount))
+        print("{} arguments:".format(argcount))
 
-        k = 0
-        for argument in sys.argv:
-            if k != 0:
-                print("{:d}: {:s}".format(k, argument))
-                k += 1
+        for k in range(count):
+                print("{}: {}".format(k + 1, sys.argv[k + 1]))
