@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
-def add_tuple(tuple_a=(), tuple_b()):
-    """Adds the first two element of two tuples together and return result"""
+def add_tuple(tuple_a=(), tuple_b=()):
+
+    """
+    Adds the first two element of two tuples together
+    and return result
+    """
+
     span_a = len(tuple_a)
     span_b = len(tuple_b)
     new_tupple = ()
@@ -15,7 +20,7 @@ def add_tuple(tuple_a=(), tuple_b()):
             else:
                 b = span_b[k]
 
-                if (k==0):
+                if (k == 0):
                     new_tupple = (a + b)
                 else:
                     new_tupple = (new_tupple, a + b)

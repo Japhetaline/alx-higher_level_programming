@@ -1,7 +1,7 @@
-#!/usr/bin/pythons
-#0-print_list_integer.py
+#!/usr/bin/python3
 
 def print_list_integer(my_list=[]):
+
     """
     printing a lists of integers
     """
