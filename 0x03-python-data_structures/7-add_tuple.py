@@ -7,16 +7,21 @@ def add_tuple(tuple_a=(), tuple_b=()):
     and return result
     """
 
-    if len(tuple_a)<2:
-        if len(tuple_a)==0:
-            tuple_a=0,0
+    span_a = len(tuple_a)
+    span_b = len(tuple_b)
+    new_tupple = ()
+    for k in range(2):
+        if k >= span_a:
+            a = 0
         else:
-            tuple_a = tuple_a[0],0
-            if len(tuple_b)<2:
-                if len(tuple_b)==0:
-                    tuple_b=0,0
+            a = tuple_a[k]
+            if k >= span_b:
+                b = 0
+            else:
+                b = tuple_b[k]
+
+                if (k == 0):
+                    new_tupple = (a + b)
                 else:
-                    tuple_b = tuple_b[0],0
-
-                    return (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
-
+                    new_tupple = (new_tupple, a + b)
+                    return (new_tupple)
