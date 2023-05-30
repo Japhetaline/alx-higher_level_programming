@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+""" 1-square.py second module, extention of class square"""
 
 class Square:
     """ Class Square that has attributes.
