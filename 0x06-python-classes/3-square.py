@@ -5,33 +5,33 @@
 
 
 class Square:
-    """Class Square that has attributes.
+    """Class Square that has attributes. Instantiation with size
 
     Attributes:
-    size (int): The weight of square
+        size (int): The size of the square
     """
 
     def __init__(self, size=0):
-        """This __init__ method for square class
+        """The __init__ method for Square class
 
-        Arguments:
-        size: (:obj: 'int', optional): Private instance size
+        Args:
+            size: (:obj: 'int', optional): A private instance size
 
         Raises:
-        TypeError: Exception if size is not an integer
-        ValueError: Execption if size is less than 0
+            TypeError: Exception if size is not an integer
+            ValueError: Exception if size is less than 0
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self._size = size
+            self.__size = size
 
-            def area(self):
-                """Calculating area of the square
+    def area(self):
+        """Calculates the area of the square
 
-                Returns:
-                The square area
-                """
-                return self.__size ** 2
+        Returns:
+            The square area
+        """
+        return self.__size ** 2
