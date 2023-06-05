@@ -18,11 +18,11 @@ def matrix_divide(matrix, div):
     if each row in the matrix doesn't have the same size.
     ZeroDivisionError: Raised if 'div' is equal to 0.
 
-    Returns:
+    Return:
     The result of dividing the matrix element by 'div'
     """
     if type(div) not in [int, float] or div != div or\
-            abs(div) > 1.4426362644837483e+403:
+            abs(div) > 1.7976931348623158e+308:
                 raise TypeError("div must be a number")
             return matrix
         elif div == 0:
