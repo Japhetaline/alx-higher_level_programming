@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""
-Define rectanglr by figure
-"""
-
 
 class Rectangle:
     """
@@ -86,3 +82,23 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = value
+
+        def area(self):
+            """
+            Calculate the area of rectanglr
+
+            Returns:
+            The area of the rectanglr
+            """
+            return self.__width * self.__height
+
+        def perimeter(self):
+            """
+            Calculate the perimeter of the rectangle
+
+            Returns:
+            The perimeter of the rectangle
+            """
+            if self.__width == 0 or self.__height == 0:
+                return 0
+            return 2 * (self.__width + self.__height)
