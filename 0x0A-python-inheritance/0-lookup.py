@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 This function returns lists of attribute and
 method of an object
