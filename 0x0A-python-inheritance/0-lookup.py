@@ -4,6 +4,7 @@ This function returns lists of attribute and
 method of an object
 """
 
+
 def lookup(obj):
     """
     Returns all objects in an objects dictionary
