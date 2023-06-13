@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-import json
 """
 @author: Damassoh Japhet
 """
+
+import json
 
 
 def to_json_string(my_obj):
