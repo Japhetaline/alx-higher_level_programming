@@ -135,6 +135,8 @@ class Rectangle(Base):
         """
         Prints the stdout rectangle with # character
         """
+        for k in range(self.y):
+            print()
         for k in range(self.height):
             print("#" * self.width)
 
