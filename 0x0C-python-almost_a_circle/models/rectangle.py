@@ -149,7 +149,7 @@ class Rectangle(Base):
                 f"- {self.width}/{self.height}"
                 )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigning an arguments to each attribute
         """
@@ -163,3 +163,31 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) >= 5:
             self.y = args[4]
+        elif kwargs:
+            for clue, value in kwargs.items():
+                if clue == "id":
+                    self.id = value
+                elif clue == "width":
+                    self.width = value
+                elif clue == "height":
+                    self.height = value
+                elif clue == "x":
+                    self.x = value
+                elif clue == "y":
+                    self.y = value
+
+    def to_dictionary(self):
+        """
+        returns a dictionary representation of the rectangle.
+
+        Returns:
+        dict: A dictionary containing the attributes of the rectangle.
+        The keys are 'id', 'width', 'height', 'x', and 'y'
+        """
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
