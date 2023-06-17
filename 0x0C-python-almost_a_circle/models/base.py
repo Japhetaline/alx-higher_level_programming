@@ -58,3 +58,17 @@ class Base:
                 string.append(cls.to_dictionary(k))
             with open(filename, 'w', encoding='utf-8') as file:
                 file.write(cls.to_json_string(string))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns a list of dictionaries represented by the JSON string.
+
+        json_string: A string representing a list of dictionaries
+        in JSON format
+        return: The list represented by te JSON string
+        """
+        if json_string is None or json_string == '':
+            return []
+        else:
+            return json.loads(json_string)
