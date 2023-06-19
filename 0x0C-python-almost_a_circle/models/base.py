@@ -72,3 +72,32 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance of the class with attributes
+        set from the given dictionary
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            dummy = cls()
+
+            dummy.update(**dictionary)
+            return dummy
+
+    def update(self, *args, **kwargs):
+        """
+        Update the instance attributes using the given
+        arguments.
+        """
+        if args:
+            attrs = ['id', 'width', 'height', 'size']
+            for attr, value in zip(attrs, args):
+                setattr(self, attr, value)
+            else:
+                for attr, value in kwargs.items():
+                    setattr(self, attr, value)
