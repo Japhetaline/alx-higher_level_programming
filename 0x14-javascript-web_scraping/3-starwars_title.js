@@ -8,7 +8,7 @@ request(url, function (err, res, data) {
   if (err) {
     console.log(err);
   } else {
-	body = JSON.parse(data);
+    body = JSON.parse(data);
     console.log(body.title);
   }
 });
